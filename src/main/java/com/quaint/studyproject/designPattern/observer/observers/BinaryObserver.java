@@ -1,4 +1,6 @@
-package com.quaint.studyproject.designPattern.observer;
+package com.quaint.studyproject.designPattern.observer.observers;
+
+import com.quaint.studyproject.designPattern.observer.Subject;
 
 /**
  * @Description:
@@ -14,7 +16,7 @@ public class BinaryObserver extends Observer {
     }
 
     @Override
-    void update() {
+    public void update() {
         System.out.println( "Binary String: " + Integer.toBinaryString(subject.getState()));
     }
 }

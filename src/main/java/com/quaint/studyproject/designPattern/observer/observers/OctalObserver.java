@@ -1,4 +1,6 @@
-package com.quaint.studyproject.designPattern.observer;
+package com.quaint.studyproject.designPattern.observer.observers;
+
+import com.quaint.studyproject.designPattern.observer.Subject;
 
 /**
  * @Description:
