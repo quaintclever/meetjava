@@ -1,7 +1,12 @@
-package com.quaint.studyproject.designPattern.observer;
+package com.quaint.studyproject.designPattern.observer.main;
+
+import com.quaint.studyproject.designPattern.observer.observers.BinaryObserver;
+import com.quaint.studyproject.designPattern.observer.observers.HexaObserver;
+import com.quaint.studyproject.designPattern.observer.observers.OctalObserver;
+import com.quaint.studyproject.designPattern.observer.Subject;
 
 /**
- * @Description:
+ * @Description: 观察者模式测试代码
  * @author: qicong
  * @Date: Created in 2019/9/16 20:04
  * @Version: 1.0
