@@ -1,5 +1,7 @@
 package com.quaint.studyproject.designPattern.observer;
 
+import com.quaint.studyproject.designPattern.observer.observers.Observer;
+
 import java.util.ArrayList;
 import java.util.List;
 
