@@ -6,6 +6,9 @@ import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAdjusters;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * @Description: String 调试测试
@@ -16,6 +19,14 @@ import java.time.format.DateTimeFormatter;
 public class QuaintTestRecord {
 
     public static void main(String[] args) {
+
+
+//        // 获取每月的 第一天和最后一天  2019/10/18
+//        LocalDateTime now = LocalDateTime.now();
+//        LocalDateTime startTime = now.with(TemporalAdjusters.firstDayOfMonth()).withHour(0).withMinute(0).withSecond(0);
+//        LocalDateTime endTime = now.with(TemporalAdjusters.lastDayOfMonth()).withHour(23).withMinute(59).withSecond(59);
+//        System.out.println(startTime);
+//        System.out.println(endTime);
 
 
 //        // 测试 BigDecimal 的比较方法   2019/10/17
