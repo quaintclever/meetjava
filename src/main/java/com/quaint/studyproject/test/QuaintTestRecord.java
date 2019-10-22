@@ -9,6 +9,8 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @Description: String 调试测试
@@ -19,6 +21,13 @@ import java.util.Date;
 public class QuaintTestRecord {
 
     public static void main(String[] args) {
+
+
+
+//        // 打印出map的key     2019/10/22
+//        Map map = new HashMap();
+//        map.put("test1",5L);
+//        System.out.println(map.keySet().toArray()[0]);
 
 
 //        // 获取每月的 第一天和最后一天  2019/10/18
