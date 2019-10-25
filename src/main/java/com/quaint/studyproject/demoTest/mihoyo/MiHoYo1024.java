@@ -51,7 +51,7 @@ public class MiHoYo1024 {
         }
 
         /**
-         * 员工内推成功，增加money  你懂的
+         * 员工内推成功，为公司增加money  你懂的
          * @param money
          */
         public void addMoney(int money) {

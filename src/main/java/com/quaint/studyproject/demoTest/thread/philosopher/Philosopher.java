@@ -1,4 +1,4 @@
-package com.quaint.studyproject.demoTest.thread;
+package com.quaint.studyproject.demoTest.thread.philosopher;
 
 import java.util.Objects;
 import java.util.Random;
