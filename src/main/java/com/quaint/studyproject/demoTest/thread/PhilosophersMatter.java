@@ -18,11 +18,14 @@ public class PhilosophersMatter {
         Chopsticks c4 = new Chopsticks("4",true);
         Chopsticks c5 = new Chopsticks("5",true);
 
-        Philosopher p1 = new Philosopher(c1,c2, countDownLatch);
-        Philosopher p2 = new Philosopher(c2,c3, countDownLatch);
-        Philosopher p3 = new Philosopher(c3,c4, countDownLatch);
-        Philosopher p4 = new Philosopher(c4,c5, countDownLatch);
-        Philosopher p5 = new Philosopher(c5,c1, countDownLatch);
+        Waiter waiter = new Waiter();
+        waiter.setLeftCount(0);
+
+        Philosopher p1 = new Philosopher(c1,c2, countDownLatch,waiter);
+        Philosopher p2 = new Philosopher(c2,c3, countDownLatch,waiter);
+        Philosopher p3 = new Philosopher(c3,c4, countDownLatch,waiter);
+        Philosopher p4 = new Philosopher(c4,c5, countDownLatch,waiter);
+        Philosopher p5 = new Philosopher(c5,c1, countDownLatch,waiter);
 
         new Thread(p1).start();
         System.out.println("p1 start");
