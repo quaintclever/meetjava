@@ -18,10 +18,13 @@ target/
 *.iws
 *.iml
 *.ipr
+target
 
 ### Eclipse ###
 bin
-
+.settings
+.classpath
+.project
 
 ### Maven ###
 .mvn
