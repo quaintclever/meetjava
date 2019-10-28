@@ -10,7 +10,8 @@ import java.util.concurrent.CountDownLatch;
 public class PhilosophersMatter {
 
     public static void main(String[] args) {
-        CountDownLatch countDownLatch = new CountDownLatch(5);
+
+//        CountDownLatch countDownLatch = new CountDownLatch(5);
 
         Chopsticks c1 = new Chopsticks("1",true);
         Chopsticks c2 = new Chopsticks("2",true);
@@ -21,11 +22,11 @@ public class PhilosophersMatter {
         Waiter waiter = new Waiter();
         waiter.setLeftCount(0);
 
-        Philosopher p1 = new Philosopher(c1,c2, countDownLatch,waiter);
-        Philosopher p2 = new Philosopher(c2,c3, countDownLatch,waiter);
-        Philosopher p3 = new Philosopher(c3,c4, countDownLatch,waiter);
-        Philosopher p4 = new Philosopher(c4,c5, countDownLatch,waiter);
-        Philosopher p5 = new Philosopher(c5,c1, countDownLatch,waiter);
+        Philosopher p1 = new Philosopher(c1,c2,waiter);
+        Philosopher p2 = new Philosopher(c2,c3,waiter);
+        Philosopher p3 = new Philosopher(c3,c4,waiter);
+        Philosopher p4 = new Philosopher(c4,c5,waiter);
+        Philosopher p5 = new Philosopher(c5,c1,waiter);
 
         new Thread(p1).start();
         System.out.println("p1 start");
@@ -38,9 +39,7 @@ public class PhilosophersMatter {
         new Thread(p5).start();
         System.out.println("p5 start");
 
-        // 同时启动线程
-        countDownLatch.countDown();
-
+//        countDownLatch.countDown();
 
     }
 

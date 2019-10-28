@@ -14,13 +14,11 @@ public class Philosopher implements Runnable {
     private Chopsticks left;
     private Chopsticks right;
     private Waiter waiter;
-    private CountDownLatch countDownLatch;
 
 
-    public Philosopher(Chopsticks left, Chopsticks right, CountDownLatch countDownLatch, Waiter waiter) {
+    public Philosopher(Chopsticks left, Chopsticks right, Waiter waiter) {
         this.left = left;
         this.right = right;
-        this.countDownLatch = countDownLatch;
         this.waiter = waiter;
     }
 
@@ -92,6 +90,7 @@ public class Philosopher implements Runnable {
     public void run() {
 
         try {
+//            countDownLatch.countDown();
             Random random = new Random();
             // 随机思考 10s以内
             Thread.sleep(random.nextInt(10)*1000);
