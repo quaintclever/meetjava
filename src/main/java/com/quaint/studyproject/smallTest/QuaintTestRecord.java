@@ -1,13 +1,5 @@
-package com.quaint.studyproject.test;
+package com.quaint.studyproject.smallTest;
 
-
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.TemporalAdjusters;
-import java.util.*;
 
 /**
  * @Description: String 调试测试

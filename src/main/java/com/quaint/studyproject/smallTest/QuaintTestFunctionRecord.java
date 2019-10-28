@@ -1,10 +1,4 @@
-package com.quaint.studyproject.test;
-
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-import java.lang.reflect.Type;
-import java.sql.Types;
-import java.util.function.Consumer;
+package com.quaint.studyproject.smallTest;
 
 /**
  * @Description: 成功，失败，回调函数测试

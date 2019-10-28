@@ -6,4 +6,9 @@ package com.quaint.studyproject.smallTest;
  * @Date: Created in 2019/10/28 19:07
  */
 public class SmallTest {
+
+    public static void main(String[] args) {
+
+    }
+
 }

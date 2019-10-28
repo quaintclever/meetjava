@@ -1,4 +1,4 @@
-package com.quaint.studyproject.test;
+package com.quaint.studyproject.smallTest;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
