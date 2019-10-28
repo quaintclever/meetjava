@@ -37,9 +37,7 @@ public class TestFile {
 			}
 		}
 		
-		map.keySet().forEach(str ->{
-			System.out.println(str);
-		});
+		map.keySet().forEach(System.out::println);
 		
 	}
 	
