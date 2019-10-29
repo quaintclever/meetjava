@@ -11,8 +11,10 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Test05{
 
+    public Lock lock = new ReentrantLock();
+
     public void fun(){
-        Lock lock = new ReentrantLock();
+
         lock.lock();
         System.out.println("start!");
         try {
