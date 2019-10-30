@@ -1,6 +1,9 @@
 package com.quaint.studyproject.smallTest;
 
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 /**
  * @Description: String 调试测试
  * @author: qicong
@@ -11,6 +14,21 @@ public class QuaintTestRecord {
 
     public static void main(String[] args) {
 
+
+        BigDecimal bigDecimal = new BigDecimal(2.6);
+        System.out.println(bigDecimal.add(new BigDecimal(0.5)).intValue());
+
+        BigDecimal bigDecimal2 = new BigDecimal(-2.6).setScale(0, RoundingMode.HALF_UP);
+        System.out.println(bigDecimal2.intValue());
+
+//        // 异常打印测试
+//        try {
+//            int a = 3/0;
+//        } catch (Exception e) {
+//            System.out.println(e.fillInStackTrace());
+//            System.out.println(e.getMessage());
+//            System.out.println(e.getLocalizedMessage());
+//        }
 
 
 //        // 打印出map的key     2019/10/22
