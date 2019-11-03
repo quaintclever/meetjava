@@ -1,8 +1,8 @@
 package com.quaint.studyproject.smallTest;
 
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
+import java.time.LocalDateTime;
+import java.util.*;
 
 /**
  * @Description: String 调试测试
@@ -12,14 +12,68 @@ import java.math.RoundingMode;
  */
 public class QuaintTestRecord {
 
+
     public static void main(String[] args) {
 
+        // -------------------------定义函数记录类-----------------------------
+        QuaintFunRecord quaintFun = new QuaintFunRecord();
+        // ----------------------------end----------------------------------
 
-        BigDecimal bigDecimal = new BigDecimal(2.6);
-        System.out.println(bigDecimal.add(new BigDecimal(0.5)).intValue());
 
-        BigDecimal bigDecimal2 = new BigDecimal(-2.6).setScale(0, RoundingMode.HALF_UP);
-        System.out.println(bigDecimal2.intValue());
+
+//        // 生成对应 映射
+//        Map<String, Integer> shopCodeIdMapping = new HashMap<>();
+//        Map<String, Integer> shopNameIdMapping = new HashMap<>();
+//        Map<Integer, String> shopIdIconMapping = new HashMap<>();
+//        shopCodeIdMapping.put("1234", 1);
+//        shopIdIconMapping.put(1, "1345646");
+//        shopNameIdMapping.put("name", 2);
+//        Integer shopId = Objects.isNull(shopCodeIdMapping.get("123"))
+//                ?shopNameIdMapping.get("name")
+//                :shopCodeIdMapping.get("123");
+//        System.out.println(shopId);
+
+//        // 测试 时间比较
+//        if (LocalDateTime.now().compareTo(LocalDateTime.parse("2019-11-19T00:00:00"))>0)
+//            System.out.println("活动结束");
+//        if (LocalDateTime.now().compareTo(LocalDateTime.parse("2019-11-19T00:00:00"))<0)
+//            System.out.println("活动未结束");
+
+
+//        // 测试  方法修改引用对象 String
+//        List<String> list = Arrays.asList("123","456");
+//        for (String s : list) {
+//            quaintFun.listModify(s);
+//            System.out.println(s);
+//        }
+
+//        // --quaint1017 【测试 回调函数】 (Be used for [ctrl+h])
+//        quaintFun.testFun(true,
+//                (a)-> System.out.println(a),
+//                //System.out::println,
+//                ()-> System.out.println("fail"));
+
+
+//        // HashMap put  返回值 测试
+//        Map<String, Integer> shopNameIdMapping = new HashMap<>();
+//        System.out.println(shopNameIdMapping.put("test",1));    // null
+//        System.out.println(shopNameIdMapping.put("test2",2));   // null
+//        System.out.println(shopNameIdMapping.put("test2",2));   // 2
+//        System.out.println(shopNameIdMapping.put("test2",3));   // 2
+//        System.out.println(shopNameIdMapping.put("test3",1));   // null
+//
+//        BiConsumer<String,Integer> biConsumer = (s, integer) -> {
+//            System.out.println("key: "+s);
+//            System.out.println("val: "+integer);
+//        };
+//        shopNameIdMapping.forEach(biConsumer);
+
+//        // 四舍五入 测试
+//        BigDecimal bigDecimal = new BigDecimal(2.6);
+//        System.out.println(bigDecimal.add(new BigDecimal(0.5)).intValue());
+//
+//        BigDecimal bigDecimal2 = new BigDecimal(-2.6).setScale(0, RoundingMode.HALF_UP);
+//        System.out.println(bigDecimal2.intValue());
 
 //        // 异常打印测试
 //        try {
