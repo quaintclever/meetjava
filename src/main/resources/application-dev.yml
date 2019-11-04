@@ -1,0 +1,29 @@
+#配置服务器
+server:
+  port: 8080
+#配置spring
+spring:
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+  datasource:
+    name: quaint
+    url: jdbc:mysql://127.0.0.1:3306/quaintblog
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  #时间转换处理
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+#配置mybatis
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.quaint.blog.pojo

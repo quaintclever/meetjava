@@ -1,4 +1,4 @@
-package com.quaint.studyproject.demoTest.algorithm_2019.october.duplicateRemoval;
+package com.quaint.studyproject.algorithmTest.algorithm_2019.october.duplicateRemoval;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -15,8 +15,8 @@ public class PhoneDuplicateRemoval {
 
 	public static void main(String[] args) throws IOException {
 		
-		File file = new File("src/main/java/com/quaint/studyproject/demoTest/algorithm_2019/october/phone1.txt");
-		File file2 = new File("src/main/java/com/quaint/studyproject/demoTest/algorithm_2019/october/phone2.txt");
+		File file = new File("src/main/java/com/quaint/studyproject/algorithmTest/algorithm_2019/october/phone1.txt");
+		File file2 = new File("src/main/java/com/quaint/studyproject/algorithmTest/algorithm_2019/october/phone2.txt");
 //		File file2 = new File(Thread.currentThread().getContextClassLoader().getResource("phone2.txt").getFile());
 		
 		Set<String> set = new HashSet();

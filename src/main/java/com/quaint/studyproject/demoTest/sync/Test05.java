@@ -1,4 +1,4 @@
-package com.quaint.studyproject.amusement.sync;
+package com.quaint.studyproject.demoTest.sync;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;

@@ -1,4 +1,4 @@
-package com.quaint.studyproject.amusement.annotation.studyAnno;
+package com.quaint.studyproject.demoTest.annotation.studyAnno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

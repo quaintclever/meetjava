@@ -1,4 +1,4 @@
-package com.quaint.studyproject.amusement.sync;
+package com.quaint.studyproject.demoTest.sync;
 
 /**
  * @Description:

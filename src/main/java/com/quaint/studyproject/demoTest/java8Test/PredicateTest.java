@@ -1,4 +1,4 @@
-package com.quaint.studyproject.amusement.java8Test;
+package com.quaint.studyproject.demoTest.java8Test;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.quaint.studyproject.demoTest.algorithm_2019.october.philosopher;
+package com.quaint.studyproject.algorithmTest.algorithm_2019.october.philosopher;
 
 /**
  * @Description: 哲学家就餐 线程实验

@@ -1,4 +1,4 @@
-package com.quaint.studyproject.amusement.mihoyo;
+package com.quaint.studyproject.demoTest.mihoyo;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;

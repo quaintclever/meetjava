@@ -1,4 +1,4 @@
-package com.quaint.studyproject.demoTest.algorithm_2019.october.philosopher;
+package com.quaint.studyproject.algorithmTest.algorithm_2019.october.philosopher;
 
 import java.util.Objects;
 import java.util.Random;

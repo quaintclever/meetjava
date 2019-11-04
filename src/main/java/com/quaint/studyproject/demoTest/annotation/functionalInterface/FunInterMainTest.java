@@ -1,4 +1,4 @@
-package com.quaint.studyproject.amusement.annotation.functionalInterface;
+package com.quaint.studyproject.demoTest.annotation.functionalInterface;
 
 import java.text.MessageFormat;
 
