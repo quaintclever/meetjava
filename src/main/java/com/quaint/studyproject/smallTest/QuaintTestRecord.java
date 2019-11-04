@@ -1,6 +1,7 @@
 package com.quaint.studyproject.smallTest;
 
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.*;
 
@@ -105,6 +106,7 @@ public class QuaintTestRecord {
 //        System.out.println(BigDecimal.ZERO.equals(bigDecimal));
 //        System.out.println("0.00".equals(bigDecimal.toString()));
 //        System.out.println(BigDecimal.ZERO.compareTo(bigDecimal));
+//        System.out.println(new BigDecimal("1.0").compareTo(BigDecimal.ZERO));
 
 
 //        // LocalDateTime 与字符串转换测试  2019/10/17

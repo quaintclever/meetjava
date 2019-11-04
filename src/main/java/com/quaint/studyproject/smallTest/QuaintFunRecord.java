@@ -10,9 +10,9 @@ import java.util.function.Consumer;
 public class QuaintFunRecord {
 
 
-    // 测试引用类型 改变值
+    // 测试引用类型String 改变值
     public void listModify(String str){
-        str+="test";
+        str+="testStr";
     }
 
 
