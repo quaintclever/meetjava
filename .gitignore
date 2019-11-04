@@ -15,7 +15,6 @@ target/
 
 ### quaint ###
 *prod.yml
-application.yml
 
 ### IntelliJ IDEA ###
 .idea
