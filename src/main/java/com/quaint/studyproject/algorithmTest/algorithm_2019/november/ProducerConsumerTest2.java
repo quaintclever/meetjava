@@ -37,11 +37,14 @@ public class ProducerConsumerTest2 {
      */
     void producerFun(){
 
+        lock.lock();
         while (getSize()==MAX_SIZE){
             try {
                 producer.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            } finally {
+                lock.unlock();
             }
         }
         put("goods");
@@ -53,11 +56,14 @@ public class ProducerConsumerTest2 {
      * 消费者 方法
      */
     synchronized void consumerFun(){
+        lock.lock();
         while (getSize()==0){
             try {
                 consumer.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();
+            } finally {
+                lock.unlock();
             }
         }
         push();
