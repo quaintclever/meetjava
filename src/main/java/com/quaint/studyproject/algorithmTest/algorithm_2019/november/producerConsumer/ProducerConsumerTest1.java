@@ -1,4 +1,4 @@
-package com.quaint.studyproject.algorithmTest.algorithm_2019.november;
+package com.quaint.studyproject.algorithmTest.algorithm_2019.november.producerConsumer;
 
 import java.util.ArrayList;
 import java.util.List;
