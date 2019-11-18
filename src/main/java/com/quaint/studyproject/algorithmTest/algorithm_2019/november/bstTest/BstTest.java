@@ -54,7 +54,15 @@ public class BstTest {
     public static void main(String[] args) {
 
         BstTree bstTree = createBst();
-
+        // 先序遍历
+        bstTree.printNote(bstTree.getRoot());
+        System.out.println("根节点的值："+bstTree.getRoot().getVal());
+        System.out.println("根节点下的节点个数："+bstTree.getRoot().getChildSize());
+        // 判断空指针异常
+        if (bstTree.getRoot().getLeft()!=null)
+            System.out.println("根节点下左节点下的子节点个数："+bstTree.getRoot().getLeft().getChildSize());
+        else
+            System.out.println("根节点下左节点下的子节点个数：0");
 
     }
 

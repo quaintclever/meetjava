@@ -12,6 +12,7 @@ import java.util.Objects;
 @Data
 public class BstTree {
 
+    // 树的结点个数
     private int size;
     private TreeNote root;
 
@@ -49,13 +50,13 @@ public class BstTree {
     }
 
     /**
-     * 中序遍历树
+     * 先序遍历树
      * @param root
      */
     public void printNote(TreeNote root){
         if (isNotNull(root.getLeft()))
             printNote(root.getLeft());
-//        System.out.println(root.getVal()+"mid：");
+        System.out.println(root.getVal());
         if (isNotNull(root.getRight()))
             printNote(root.getRight());
     }
