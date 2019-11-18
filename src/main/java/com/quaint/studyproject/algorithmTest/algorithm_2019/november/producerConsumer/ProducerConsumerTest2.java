@@ -74,7 +74,7 @@ public class ProducerConsumerTest2 {
 
     public static void main(String[] args) {
 
-        ProducerConsumerTest1 producerConsumer = new ProducerConsumerTest1();
+        ProducerConsumerTest2 producerConsumer = new ProducerConsumerTest2();
         // 创建 30 个生产者
         for (int i = 0; i < 20; i++) {
             new Thread(producerConsumer::producerFun).start();
