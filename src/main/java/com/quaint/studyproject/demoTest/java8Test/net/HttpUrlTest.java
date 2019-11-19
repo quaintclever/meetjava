@@ -12,6 +12,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * @Description: http post 测试
@@ -92,7 +93,11 @@ public class HttpUrlTest {
     public static void main(String[] args) {
 
         String url = "https://corpapi.ppdai.com/admin/sendEmail?cardNo=%s";
-        System.out.println(getTest(String.format(url,"50000")));
+//        System.out.println(getTest(String.format(url,"500000")));
+        String format = getTest(String.format(url, "500000"));
+        System.out.println(format);
+        JSONObject jsonObject = JSONObject.parseObject(format);
+        System.out.println(Objects.isNull(jsonObject.getString("data")));
     }
 
 }
