@@ -1,5 +1,7 @@
 package com.quaint.studyproject.smallTest;
 
+import com.alibaba.fastjson.JSONObject;
+
 /**
  * @Description:
  * @author: qi cong
@@ -8,7 +10,6 @@ package com.quaint.studyproject.smallTest;
 public class SmallTest {
 
     public static void main(String[] args) {
-
 
 
     }
