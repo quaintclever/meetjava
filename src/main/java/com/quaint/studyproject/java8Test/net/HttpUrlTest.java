@@ -1,4 +1,4 @@
-package com.quaint.studyproject.demoTest.java8Test.net;
+package com.quaint.studyproject.java8Test.net;
 
 import com.alibaba.fastjson.JSONObject;
 import org.apache.http.HttpEntity;

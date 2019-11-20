@@ -1,4 +1,4 @@
-package com.quaint.studyproject.demoTest.java8Test.util;
+package com.quaint.studyproject.java8Test.util;
 
 import java.util.Stack;
 

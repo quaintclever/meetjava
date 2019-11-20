@@ -1,12 +1,6 @@
 package com.quaint.studyproject.smallTest;
 
 
-import com.alibaba.fastjson.JSONObject;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.*;
-
 /**
  * @Description: String 调试测试
  * @author: qicong
@@ -22,13 +16,16 @@ public class QuaintTestRecord {
         QuaintFunRecord quaintFun = new QuaintFunRecord();
         // ----------------------------end----------------------------------
 
-        // 测试 json 转换
+
+
+//        // 测试 json 转换
 //        String json = "{'code':0,'message':'请求成功','data':{'id':null,'name':'admin2_cswb','realName':'','email':'','cardNo':null}}";
 //        JSONObject jsonObject = JSONObject.parseObject(json);
+//        // 可能存在空指针异常
 //        JSONObject jsonObject1 = JSONObject.parseObject(jsonObject.getString("data"));
 //        System.out.println(jsonObject1.getString("name"));
 //
-//        // 等价于
+//        // 等价于  可能存在空指针异常
 //        System.out.println(jsonObject.getJSONObject("data").getString("name"));
 
 
