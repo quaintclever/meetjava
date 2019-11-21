@@ -35,6 +35,7 @@ public class BstTree {
         if (note.getVal() >=  (root.getVal())){
             if (isNull(root.getRight())){
                 root.setRight(note);
+                note.setParent(root);
                 size++;
             } else{
                 addNote(note,root.getRight());
@@ -42,6 +43,7 @@ public class BstTree {
         } else {
             if (isNull(root.getLeft())){
                 root.setLeft(note);
+                note.setParent(root);
                 size++;
             }else{
                 addNote(note,root.getLeft());

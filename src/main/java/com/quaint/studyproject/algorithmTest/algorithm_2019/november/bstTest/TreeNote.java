@@ -13,7 +13,7 @@ public class TreeNote{
     private int val;
     private TreeNote left;
     private TreeNote right;
-    private TreeNote prent;
+    private TreeNote parent;
 
     public TreeNote(int val) {
         this.val = val;

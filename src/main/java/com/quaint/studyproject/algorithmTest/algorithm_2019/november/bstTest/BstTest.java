@@ -1,9 +1,6 @@
 package com.quaint.studyproject.algorithmTest.algorithm_2019.november.bstTest;
 
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 /**
  * @Description:
@@ -36,9 +33,9 @@ public class BstTest {
         // 生成随机 插入树的 int 值
         Random random = new Random();
         Set sets = new HashSet();
-        for (int i = 0; i < 10; i++) {
+        do {
             sets.add(random.nextInt(20));
-        }
+        } while (sets.size() < 10);
         Iterator it = sets.iterator();
 
         // 创建一颗树
@@ -50,6 +47,23 @@ public class BstTest {
         return bstTree;
     }
 
+    public static int findKMinNote(TreeNote root, int k){
+
+        if (root.getLeft()!=null){
+            int left = root.getLeft().getChildSize();
+            if (left == k-1)
+                return root.getVal();
+            else if (left > k-1)
+                return findKMinNote(root.getLeft(),k);
+            else
+                return findKMinNote(root.getRight(),k-left-1);
+        } else {
+            if (k==1)
+                return root.getVal();
+            return findKMinNote(root.getRight(),k-1);
+        }
+    }
+
 
     public static void main(String[] args) {
 
@@ -58,11 +72,13 @@ public class BstTest {
         bstTree.printNote(bstTree.getRoot());
         System.out.println("根节点的值："+bstTree.getRoot().getVal());
         System.out.println("根节点下的节点个数："+bstTree.getRoot().getChildSize());
-        // 判断空指针异常
-        if (bstTree.getRoot().getLeft()!=null)
-            System.out.println("根节点下左节点下的子节点个数："+bstTree.getRoot().getLeft().getChildSize());
-        else
-            System.out.println("根节点下左节点下的子节点个数：0");
+
+        System.out.println("请输入要寻找的第k小的数字（1~10）：");
+        Scanner scanner = new Scanner(System.in);
+        int k = scanner.nextInt();
+        int val = findKMinNote(bstTree.getRoot(),k);
+        System.out.println("-----------");
+        System.out.println(val);
 
     }
 
