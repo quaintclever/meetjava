@@ -1,6 +1,8 @@
 package com.quaint.studyproject.smallTest;
 
 
+import java.util.HashMap;
+
 /**
  * @Description: String 调试测试
  * @author: qicong
@@ -16,6 +18,11 @@ public class QuaintTestRecord {
         QuaintFunRecord quaintFun = new QuaintFunRecord();
         // ----------------------------end----------------------------------
 
+
+//        int i = 0;
+//        int j = 0;
+//        i = i++ + ++i;
+//        System.out.println(i);
 
 
 //        // 测试 json 转换
