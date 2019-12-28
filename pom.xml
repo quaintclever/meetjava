@@ -11,7 +11,7 @@
 	<groupId>com.quaint</groupId>
 	<artifactId>java-study-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>java-study-project</name>
+	<name>java-sp</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
