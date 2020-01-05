@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.BiFunction;
+import java.util.function.Function;
 
 /**
  * @author quaint
@@ -69,12 +70,16 @@ public class LambdaTest extends FunctionTest<Book> {
         });
         System.out.println(books);
         // or
+//        books.sort((a,b)->a.getPage().compareTo(b.getPage()));
         books.sort(Comparator.comparing(Book::getPage));
         System.out.println(books);
 
         System.out.println("---------------------");
         BiFunction<String, Integer, Character> biFunction = String::charAt;
         System.out.println(biFunction.apply("quaint", 2));
+        String str = "clever";
+        Function<Integer, Character> characterFunction = str::charAt;
+        System.out.println(characterFunction.apply(1));
 
         System.out.println("---------------------");
 
