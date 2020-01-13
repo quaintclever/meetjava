@@ -2,20 +2,19 @@ package com.quaint.other.code.quaint;
 
 
 /**
- * @Description: String 调试测试
- * @author: qicong
- * @Date: Created in 2019/9/19 11:28
- * @Version: 1.0
+ * 调试测试
+ * @author qicong
+ * @date Created in 2019/9/19 11:28
  */
-public class QuaintTestRecord {
+public class QuaintTestRecord extends QuaintFunRecord{
 
 
     public static void main(String[] args) {
 
-        // -------------------------定义函数记录类-----------------------------
-        QuaintFunRecord quaintFun = new QuaintFunRecord();
-        // ----------------------------end----------------------------------
-
+        System.out.println(judgeExportType(null, null));
+        System.out.println(judgeExportType(new Object(), null));
+        System.out.println(judgeExportType(null, new Object()));
+        System.out.println(judgeExportType(new Object(), new Object()));
 
 //        // 测试 Arrays.asList 是否为真正的 list
 //        String [] strs = new String[] {"aaa","bbb","ccc"};

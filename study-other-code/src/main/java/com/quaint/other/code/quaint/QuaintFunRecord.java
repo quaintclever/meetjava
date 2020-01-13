@@ -14,6 +14,19 @@ public class QuaintFunRecord {
 
 
     /**
+     * 只允许传入1个, 判断传入的是 o1 还是 o2
+     * @param o1
+     * @param o2
+     * @return
+     */
+    protected static int judgeExportType(Object o1, Object o2){
+        int type = 0;
+        type += (o1 == null) ? 0 : 1;
+        type += (o2 == null) ? 0 : 2;
+        return type == 3 ? 0 : type;
+    }
+
+    /**
      * list 转 str
      * @param list list
      * @return
