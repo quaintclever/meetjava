@@ -1,4 +1,6 @@
-package com.quaint.sp.javabase.java8.helper;
+package com.quaint.sp.javabase.java8.function;
+
+import com.quaint.sp.javabase.java8.helper.Book;
 
 import java.util.List;
 import java.util.function.*;
@@ -8,7 +10,7 @@ import java.util.stream.Collectors;
  * @author quaint
  * @date 2020-01-05 19:38
  */
-public class FunctionTest<T> {
+public class LambdaFunctionTest<T> {
 
     protected static void process(Runnable run){
         run.run();

@@ -1,7 +1,7 @@
 package com.quaint.sp.javabase.java8;
 
 import com.quaint.sp.javabase.java8.helper.Book;
-import com.quaint.sp.javabase.java8.helper.FunctionTest;
+import com.quaint.sp.javabase.java8.function.LambdaFunctionTest;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -13,7 +13,7 @@ import java.util.function.Function;
  * @author quaint
  * @date 2020-01-05 19:26
  */
-public class LambdaTest extends FunctionTest<Book> {
+public class LambdaTestLambda extends LambdaFunctionTest<Book> {
 
     public static void main(String[] args) {
 
