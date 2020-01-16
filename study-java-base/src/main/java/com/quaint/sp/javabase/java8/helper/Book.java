@@ -1,6 +1,8 @@
 package com.quaint.sp.javabase.java8.helper;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
@@ -8,16 +10,11 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book{
 
     private String color;
     private Integer page;
 
-    public Book() {
-    }
-
-    public Book(String color, Integer page) {
-        this.color = color;
-        this.page = page;
-    }
 }

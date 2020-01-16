@@ -70,7 +70,7 @@ public class LambdaTestLambda extends LambdaFunctionTest<Book> {
         });
         System.out.println(books);
         // or
-//        books.sort((a,b)->a.getPage().compareTo(b.getPage()));
+//        bookList.sort((a,b)->a.getPage().compareTo(b.getPage()));
         books.sort(Comparator.comparing(Book::getPage));
         System.out.println(books);
 

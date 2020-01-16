@@ -5,29 +5,24 @@ import com.quaint.sp.javabase.java8.helper.Book;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import static com.quaint.sp.javabase.java8.helper.HelperSupplier.bookList;
+
 /**
  * @author quaint
  * @date 2020-01-16 14:35
  */
 public class Collectors1Test {
 
-    public final static List<Book> books = Arrays.asList(
-            new Book("red",100),
-            new Book("red",60),
-            new Book("green",60),
-            new Book("green",101));
 
     public static void main(String[] args) {
 
-
-
         System.out.println("以颜色进行分组:");
         System.out.println("normal -->");
-        System.out.println(groupByNormal(books));
+        System.out.println(groupByNormal(bookList));
         System.out.println("lambda -->");
-        System.out.println(groupByLambda(books));
+        System.out.println(groupByLambda(bookList));
         System.out.println("collect -->");
-        System.out.println(groupByCollect(books));
+        System.out.println(groupByCollect(bookList));
 
     }
 
@@ -36,7 +31,7 @@ public class Collectors1Test {
      * 以颜色进行分组 --> 普通写法
      */
     private static Map<String,List<Book>> groupByNormal(List<Book> list){
-        Map<String,List<Book>> map = new HashMap<>();
+        Map<String,List<Book>> map = new HashMap<>(8);
         for (Book book: list) {
             List<Book> books = map.get(book.getColor());
             if (books==null){
@@ -52,7 +47,7 @@ public class Collectors1Test {
      * 以颜色进行分组 --> java8 lambda optional 写法
      */
     private static Map<String,List<Book>> groupByLambda(List<Book> list){
-        Map<String,List<Book>> map = new HashMap<>();
+        Map<String,List<Book>> map = new HashMap<>(8);
         list.forEach(book -> {
             List<Book> books = Optional.ofNullable(map.get(book.getColor())).orElseGet(() -> {
                 List<Book> colorBook = new ArrayList<>();
