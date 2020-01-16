@@ -17,6 +17,9 @@ public class Collectors2Test extends Collectors2FunctionTest {
         testGroupingByAveragingInt(bookList);
         testCollectingAndThen(boxList);
         testCounting(bookList);
+        testGroupingByFunctionAndAveragingInt(bookList);
+        testGroupingByFunctionAndMap(bookList);
+        testSummarizingInt(bookList);
 
     }
 

@@ -50,6 +50,26 @@ public class Collectors2FunctionTest {
         Optional.of((long) list.size()).ifPresent(System.out::println);
     }
 
+    protected static void testGroupingByFunctionAndAveragingInt(List<Book> list){
+        System.out.println("testGroupingByFunctionAndAveragingInt");
+        Optional.ofNullable(list.stream()
+                .collect(Collectors.groupingBy(Book::getColor,Collectors.averagingInt(Book::getPage))))
+                .ifPresent(System.out::println);
+    }
+
+    protected static void testGroupingByFunctionAndMap(List<Book> list){
+        System.out.println("testGroupingByFunctionAndMap");
+        Optional.ofNullable(list.stream()
+                .collect(Collectors.groupingBy(Book::getColor,HashMap::new,Collectors.averagingInt(Book::getPage))))
+                .ifPresent(System.out::println);
+    }
+
+    protected static void testSummarizingInt(List<Book> list){
+        System.out.println("testSummarizingInt");
+        Optional.ofNullable(list.stream()
+                .collect(Collectors.summarizingInt(Book::getPage)))
+                .ifPresent(System.out::println);
+    }
 
 
 }
