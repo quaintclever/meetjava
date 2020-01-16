@@ -38,6 +38,20 @@ public class OptionalTest {
 
         System.out.println(optionalBox.map(Box::getBook));
 
+
+        System.out.println("= = = = = = ");
+
+        Box box = new Box();
+        Book book2 = new Book();
+        book2.setColor("red");
+        box.setBook(book2);
+
+
+        System.out.println(Optional.ofNullable(box)
+                .flatMap(b -> Optional.ofNullable(b.getBook()))
+                .map(Book::getColor)
+                .orElse("unknow"));
+
     }
 
 }
