@@ -1,6 +1,5 @@
-package com.quaint.sp.design.pattern.observer.main;
+package com.quaint.sp.design.pattern.observer;
 
-import com.quaint.sp.design.pattern.observer.Subject;
 import com.quaint.sp.design.pattern.observer.observers.BinaryObserver;
 import com.quaint.sp.design.pattern.observer.observers.HexaObserver;
 import com.quaint.sp.design.pattern.observer.observers.OctalObserver;

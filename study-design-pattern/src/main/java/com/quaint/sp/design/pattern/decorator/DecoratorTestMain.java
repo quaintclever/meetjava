@@ -1,4 +1,4 @@
-package com.quaint.sp.design.pattern.decorator.main;
+package com.quaint.sp.design.pattern.decorator;
 
 import com.quaint.sp.design.pattern.decorator.content.AbstractTea;
 import com.quaint.sp.design.pattern.decorator.content.GreenTea;
