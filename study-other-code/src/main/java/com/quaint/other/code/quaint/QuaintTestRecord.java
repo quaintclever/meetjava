@@ -11,10 +11,13 @@ public class QuaintTestRecord extends QuaintFunRecord{
 
     public static void main(String[] args) {
 
-        System.out.println(judgeExportType(null, null));
-        System.out.println(judgeExportType(new Object(), null));
-        System.out.println(judgeExportType(null, new Object()));
-        System.out.println(judgeExportType(new Object(), new Object()));
+
+        System.out.println(Runtime.getRuntime().availableProcessors());
+
+//        System.out.println(judgeExportType(null, null));
+//        System.out.println(judgeExportType(new Object(), null));
+//        System.out.println(judgeExportType(null, new Object()));
+//        System.out.println(judgeExportType(new Object(), new Object()));
 
 //        // 测试 Arrays.asList 是否为真正的 list
 //        String [] strs = new String[] {"aaa","bbb","ccc"};
