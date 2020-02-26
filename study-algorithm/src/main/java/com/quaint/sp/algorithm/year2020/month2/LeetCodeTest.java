@@ -1,6 +1,7 @@
 package com.quaint.sp.algorithm.year2020.month2;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +14,7 @@ public class LeetCodeTest {
 
     public static void main(String[] args) {
 
-        int i = daysBetweenDates("2019-06-29", "2019-06-30");
+        int i = daysBetweenDates("2000-06-29", "2019-06-30");
         System.out.println(i);
 
     }
@@ -38,7 +39,8 @@ public class LeetCodeTest {
 
         LocalDate local1 = LocalDate.parse(date1);
         LocalDate local2 = LocalDate.parse(date2);
-        int day = local1.until(local2).getDays();
+        Long tempDay = local1.until(local2, ChronoUnit.DAYS);
+        int day = tempDay.intValue();
         return day;
     }
 
