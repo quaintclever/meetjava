@@ -2,10 +2,12 @@
 
 ---
 
- -  algorithmTest (Algorithm exercises)
+ -  algorithm (Algorithm exercises)
     
- -  demoTest (Small demo exercise)
+ -  dataStructure (Data structure exercise)
 
  -  designPattern (Design pattern exercise)
 
- -  smallTest (Small exercise)
+ -  javaBase (Java base exercise)
+ 
+ -  otherCode (Other code exercise)

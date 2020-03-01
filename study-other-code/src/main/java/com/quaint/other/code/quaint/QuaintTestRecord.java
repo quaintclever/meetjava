@@ -12,7 +12,8 @@ public class QuaintTestRecord extends QuaintFunRecord{
     public static void main(String[] args) {
 
 
-        System.out.println(Runtime.getRuntime().availableProcessors());
+//        // 获取操作系统的核数
+//        System.out.println(Runtime.getRuntime().availableProcessors());
 
 //        System.out.println(judgeExportType(null, null));
 //        System.out.println(judgeExportType(new Object(), null));

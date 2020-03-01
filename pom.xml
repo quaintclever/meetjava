@@ -9,7 +9,8 @@
         <module>study-design-pattern</module>
 		<module>study-java-base</module>
 		<module>study-other-code</module>
-	</modules>
+        <module>study-data-structure</module>
+    </modules>
 	<!-- 父工程 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
