@@ -1,25 +1,61 @@
 
-## =======【编程基础】=======
+## 【编程基础】
 > 不积跬步无以至千里。学基础还是要坚持。
-★：已尝试
-☆：未尝试
 
 ---
 
 >### 数据结构&算法
 >> #### 数据结构
->>> ☆ 占位
+>>> [学习地址](https://visualgo.net/zh)
+>>> - 数组
+>>> - 栈
+>>> - 队列
+>>> - 链表
+>>> - 树
+>>> - 散列表
+>>> - 堆
+>>> - 图
+>>
 >> #### 算法
->>> ★ <a href="https://leetcode-cn.com/problems/two-sum/" target="_blank">1. 两数之和</a>
->>> ★ <a href="https://leetcode-cn.com/problems/add-two-numbers/" target="_blank">2. 两数相加</a>
->>> ★ <a href="https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/" target="_blank">3. 无重复字符的最长子串</a>
->>> ☆ <a href="https://leetcode-cn.com/problems/median-of-two-sorted-arrays/" target="_blank">4. 寻找两个有序数组的中位数</a>
->>> ★ <a href="https://leetcode-cn.com/problems/number-of-days-between-two-dates/" target="_blank">1360. 日期之间隔几天</a>
-
+>>> **算法思想**
+>>> - 穷举(Brute Force)
+>>> - 分治(Divide and Conquer)
+>>> - 贪心(Greedy)
+>>> - 动态规划(Dynamic Programming)
+>>> - 回溯(Backtracking)
+>>> - 分枝界限(Branch and Bound)
+>>>
+>>> **排序算法**
+>>> - 冒泡排序
+>>> - 插入排序
+>>> - 希尔排序
+>>> - 选择排序
+>>> - 归并排序
+>>> - 快速排序
+>>> - 堆排序
+>>> - 计数排序
+>>> - 桶排序
+>>> - 基数排序
+>>>
+>>> **查找算法**
+>>> - 顺序查找
+>>> - 二分查找
+>>> - 散列查找
+>>> - 二叉树查找
+>>>
+>>> **搜索算法**
+>>> - 树的层次遍历
+>>> - 树的(前/中/后)序遍历
+>>> - 深度优先搜索(dfs)
+>>> - 广度优先搜索(bfs)
+>>>
+>>> **算法练习**
+>>> - [Leetcode](https://leetcode-cn.com/)
+>>> - [Practice Record](https://github.com/quaintclever/Java-SP)
 
 ---
 
-> ### 设计模式 
+> ### 设计模式
 >>  ★ <a href="https://www.runoob.com/design-pattern/factory-pattern.html" target="_blank">1. 工厂模式</a>
 >>  ★ <a href="https://www.runoob.com/design-pattern/abstract-factory-pattern.html" target="_blank">2. 抽象工厂模式</a>
 >>  ★ <a href="https://www.runoob.com/design-pattern/singleton-pattern.html" target="_blank">3. 单例模式</a>
@@ -63,21 +99,3 @@
 
 > ### 操作系统
 ☆ 占位 -> 进程和线程 并发 和锁 内存分布调度等等 （深入理解计算机系统）
-
----
-
-## =======【编程实践】=======
-> 不积跬步无以至千里，实践还是要多练。
-
----
-
-> ### java实践
->> #### awt包
->>> [BufferedImage实践](https://www.cnblogs.com/quaint/p/12349817.html)
->> #### zip包
->>> [ZipInputStream实践](https://www.cnblogs.com/quaint/p/12316628.html)
-
----
-
-> ### spring实践
->>[SpringBoot+EasyExcel实践](https://www.cnblogs.com/quaint/p/12305541.html)
