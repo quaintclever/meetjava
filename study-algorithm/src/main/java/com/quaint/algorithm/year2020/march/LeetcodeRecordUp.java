@@ -13,11 +13,41 @@ public class LeetcodeRecordUp {
     public static void main(String[] args) {
 
 
+        // 二查数组中的查找
+        int [][] array = {{}};
+        System.out.println(Arrays.deepToString(array));
+        System.out.println(find(16, array));
+
+
         // 1130. 叶值的最小代价生成树
-        int[] arr = {5, 2, 3};
-        System.out.println(mctFromLeafValues(arr));
+//        int[] arr = {5, 2, 3};
+//        System.out.println(mctFromLeafValues(arr));
 
 
+
+
+    }
+
+
+    /**
+     * 二查数组中的查找
+     * @param target
+     * @param array
+     * @return
+     */
+    public static boolean find(int target, int [][] array) {
+        for(int i = 0;i<array.length;i++){
+            if(array[i].length !=0 && array[i][array[i].length-1]<target){
+                continue;
+            }
+            for(int j = 0;j<array[i].length;j++){
+                if(array[i][j]==target){
+                    return true;
+                }
+            }
+
+        }
+        return false;
     }
 
 
