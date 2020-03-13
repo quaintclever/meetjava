@@ -1,6 +1,6 @@
 package com.quaint.algorithm.year2020.february;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -20,17 +20,17 @@ public class LeetcodeRecord {
 
 
         // 1360. 日期之间隔几天
-        System.out.println(record.daysBetweenDates("2000-06-29", "2019-06-30"));
+        System.out.println(record.daysBetweenDates("2000-06-29T00:00:00", "2019-06-30T00:00:00"));
 
-        // 3. 无重复字符的最长子串
-        System.out.println(record.lengthOfLongestSubstring("abcabcbb"));
-
-        // 2. 两数相加
-        record.addTwoNumbers(new LeetcodeRecord.ListNode(1),new LeetcodeRecord.ListNode(9));
-
-        // 1. 两数之和
-        int [] ints = {1,2,3};
-        record.twoSum(ints,3);
+//        // 3. 无重复字符的最长子串
+//        System.out.println(record.lengthOfLongestSubstring("abcabcbb"));
+//
+//        // 2. 两数相加
+//        record.addTwoNumbers(new LeetcodeRecord.ListNode(1),new LeetcodeRecord.ListNode(9));
+//
+//        // 1. 两数之和
+//        int [] ints = {1,2,3};
+//        record.twoSum(ints,3);
 
 
     }
@@ -59,8 +59,9 @@ public class LeetcodeRecord {
 //
 //        return day>0?day:day*-1;
 
-        LocalDate local1 = LocalDate.parse(date1);
-        LocalDate local2 = LocalDate.parse(date2);
+        LocalDateTime local1 = LocalDateTime.parse(date1);
+        LocalDateTime local2 = LocalDateTime.parse(date2);
+
         Long tempDay = local1.until(local2, ChronoUnit.DAYS);
         int day = tempDay.intValue();
         return day;
