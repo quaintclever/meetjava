@@ -1,9 +1,9 @@
 package com.quaint.algorithm.year2020.march;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
- * 三月份 刷题记录上
+ * 三月份 刷题记录
  *
  * @author quaint
  * @since 01 March 2020
@@ -12,11 +12,20 @@ public class LeetcodeRecordUp {
 
     public static void main(String[] args) {
 
+        ListNode head = new ListNode(1);
+        ListNode next1 = new ListNode(2);
+        ListNode next2 = new ListNode(3);
+        head.next = next1;
+        next1.next = next2;
+        // 倒序输出链表
+        ArrayList<Integer> integers = printListFromTailToHead(head);
+        System.out.println(integers);
+
 
         // 二查数组中的查找
-        int [][] array = {{}};
-        System.out.println(Arrays.deepToString(array));
-        System.out.println(find(16, array));
+//        int [][] array = {{}};
+//        System.out.println(Arrays.deepToString(array));
+//        System.out.println(find(16, array));
 
 
         // 1130. 叶值的最小代价生成树
@@ -28,6 +37,28 @@ public class LeetcodeRecordUp {
 
     }
 
+    public static class ListNode {
+        int val;
+        ListNode next = null;
+
+        ListNode(int val) {
+            this.val = val;
+        }
+    }
+
+    public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
+
+        Stack<Integer> stack = new Stack<>();
+        while(listNode!=null){
+            stack.push(listNode.val);
+            listNode = listNode.next;
+        }
+        ArrayList<Integer> re = new ArrayList<>();
+        while(!stack.empty()){
+            re.add(stack.pop());
+        }
+        return re;
+    }
 
     /**
      * 二查数组中的查找
