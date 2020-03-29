@@ -23,8 +23,8 @@
 >
 > **3-系统总线**
 >> [3.1-总线的基本概念](https://www.cnblogs.com/quaint/articles/12595465.html)
->> 3.2-总线的分类
->> 3.3-总线的性能及性能指标
+>> [3.2-总线的分类](https://www.cnblogs.com/quaint/articles/12595608.html)
+>> [3.3-总线的性能及性能指标](https://www.cnblogs.com/quaint/articles/12595716.html)
 >> 3.4-总线结构
 >> 3.5-总线控制
 >
