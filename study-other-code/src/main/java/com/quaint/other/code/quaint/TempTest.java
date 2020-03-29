@@ -5,7 +5,7 @@ package com.quaint.other.code.quaint;
  * @date 23 March 2020
  * @since 1.38
  */
-public class Test {
+public class TempTest {
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
