@@ -36,6 +36,7 @@ public class WeakHashMapTest {
         map.put("test2",new TestBody("caiji"));
         map.put("test2",new TestBody("wjs"));
 
+        // 虚引用,当没有强引用时.调用gc 会干掉虚引用
         System.gc();
 
         Scanner in = new Scanner(System.in);
