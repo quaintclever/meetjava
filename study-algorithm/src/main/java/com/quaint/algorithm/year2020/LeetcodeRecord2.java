@@ -1,4 +1,4 @@
-package com.quaint.algorithm.year2020.february;
+package com.quaint.algorithm.year2020;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
@@ -12,11 +12,11 @@ import java.util.Set;
  * @date 23 February 2020
  * @since master
  */
-public class LeetcodeRecord {
+public class LeetcodeRecord2 {
 
     public static void main(String[] args) {
 
-        LeetcodeRecord record = new LeetcodeRecord();
+        LeetcodeRecord2 record = new LeetcodeRecord2();
 
 
         // 1360. 日期之间隔几天
@@ -26,7 +26,7 @@ public class LeetcodeRecord {
 //        System.out.println(record.lengthOfLongestSubstring("abcabcbb"));
 //
 //        // 2. 两数相加
-//        record.addTwoNumbers(new LeetcodeRecord.ListNode(1),new LeetcodeRecord.ListNode(9));
+//        record.addTwoNumbers(new LeetcodeRecord2.ListNode(1),new LeetcodeRecord2.ListNode(9));
 //
 //        // 1. 两数之和
 //        int [] ints = {1,2,3};

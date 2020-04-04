@@ -3,9 +3,7 @@ package com.quaint.javabase.utilpack;
 import java.util.Stack;
 
 /**
- * @Description:
- * @author: qi cong
- * @Date: Created in 2019-11-13 11:27
+ * @author quaint
  */
 public class StackTest {
 
@@ -34,8 +32,6 @@ public class StackTest {
         System.out.println(stringStack);
         // throw a exception
         System.out.println(stringStack.pop());
-
-
 
 
     }

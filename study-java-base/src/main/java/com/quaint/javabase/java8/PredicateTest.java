@@ -1,4 +1,4 @@
-package com.quaint.javabase.utilpack;
+package com.quaint.javabase.java8;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.quaint.algorithm.year2020.march;
+package com.quaint.algorithm.year2020;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ import java.util.*;
  * @author quaint
  * @since 01 March 2020
  */
-public class LeetcodeRecordUp {
+public class LeetcodeRecord3 {
 
     public static void main(String[] args) {
 
