@@ -25,19 +25,22 @@ public class ThreadLocalTest {
         }).start();
 
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(1,2,
-                0L, TimeUnit.MILLISECONDS,
+                1L, TimeUnit.MILLISECONDS,
                 new LinkedBlockingQueue<>(1),
                 Thread::new,new ThreadPoolExecutor.CallerRunsPolicy());
+        poolExecutor.allowCoreThreadTimeOut(true);
 
         poolExecutor.execute(()->{
             threadLocal.set("thread service1");
             System.out.println("executor1:"+threadLocal.get());
-            try {
-                TimeUnit.SECONDS.sleep(1);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
         });
+
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         poolExecutor.execute(()->{
             System.out.println("executor2:"+threadLocal.get());
             try {
