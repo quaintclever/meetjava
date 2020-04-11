@@ -11,6 +11,10 @@ public class ContendedTest {
 //    @Contended
 //    private static volatile long[] arr = new long[2];
 
+    /**
+     * 1.7 采用的是 long 数组, 每8个 为一个缓存行, 不会产生冲突
+     * 需要加 JVM 参数  -XX:-RestrictContended
+     */
     @Contended
     volatile long long1;
 
