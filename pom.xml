@@ -16,12 +16,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.0.BUILD-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/><!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.quaint</groupId>
-	<artifactId>java-sp</artifactId>
+	<artifactId>Java-BaseStudy</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>java-sp</name>
+	<name>Java-BaseStudy</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
