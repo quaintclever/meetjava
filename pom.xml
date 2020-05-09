@@ -9,7 +9,6 @@
         <module>study-design-pattern</module>
 		<module>study-java-base</module>
 		<module>study-other-code</module>
-        <module>study-data-structure</module>
     </modules>
 	<!-- 父工程 -->
 	<parent>
