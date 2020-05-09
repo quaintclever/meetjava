@@ -1,4 +1,4 @@
-package com.quaint.algorithm.year2020;
+package com.quaint.algorithm.year2020.february;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

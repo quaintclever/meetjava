@@ -1,4 +1,4 @@
-package com.quaint.algorithm.year2020;
+package com.quaint.algorithm.year2020.april;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
