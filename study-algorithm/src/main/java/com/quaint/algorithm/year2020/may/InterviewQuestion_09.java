@@ -21,7 +21,7 @@ public class InterviewQuestion_09 {
 
     public static void main(String[] args) {
 
-        CQueue cQueue = new CQueue();
+        CQueue2 cQueue = new CQueue2();
         cQueue.appendTail(1);
         cQueue.appendTail(2);
         cQueue.appendTail(3);
@@ -35,6 +35,40 @@ public class InterviewQuestion_09 {
         System.out.println(cQueue.deleteHead());
         System.out.println(cQueue.deleteHead());
 
+    }
+
+    public static class CQueue2 {
+
+        private Stack<Integer> s1;
+        private Stack<Integer> s2;
+        private int size;
+
+        public CQueue2() {
+            s1 = new Stack<>();
+            s2 = new Stack<>();
+            size = 0;
+        }
+
+        public void appendTail(int value) {
+            s1.push(value);
+            size++;
+        }
+
+        public int deleteHead() {
+
+            if (size==0){
+                return -1;
+            }
+
+            if (s2.isEmpty()){
+                while (!s1.isEmpty()){
+                    s2.push(s1.pop());
+                }
+            }
+            size--;
+            return s2.pop();
+
+        }
     }
 
 
