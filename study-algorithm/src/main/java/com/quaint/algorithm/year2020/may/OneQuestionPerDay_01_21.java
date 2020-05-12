@@ -18,9 +18,9 @@ package com.quaint.algorithm.year2020.may;
  * </p>
  *
  * @author quaint
- * @since 10 May 2020
+ * @since 01 May 2020
  */
-public class OneQuestionPerDay_21 {
+public class OneQuestionPerDay_01_21 {
 
     public static void main(String[] args) {
 

@@ -32,7 +32,7 @@ package com.quaint.algorithm.year2020.may;
  * @author quaint
  * @since 11 May 2020
  */
-public class OneQuestionPerDay_50 {
+public class OneQuestionPerDay_11_50 {
 
     public static void main(String[] args) {
 
