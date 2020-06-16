@@ -9,7 +9,8 @@
         <module>study-design-pattern</module>
 		<module>study-java-base</module>
 		<module>study-other-code</module>
-    </modules>
+		<module>study-spring</module>
+	</modules>
 	<!-- 父工程 -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -28,12 +29,6 @@
 	</properties>
 
 	<dependencies>
-		<!-- spring 相关 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
 		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
