@@ -11,6 +11,14 @@ public class QuaintTestRecord extends QuaintFunRecord{
 
     public static void main(String[] args) {
 
+//        // 字符串001 自增
+//        String maxVal = "KMNG0101";
+//        String val = maxVal.substring(maxVal.indexOf('0'));
+//        System.out.println(val);
+//        int i = Integer.parseInt(val);
+//        System.out.println(i);
+//        String format = String.format("%0"+val.length()+"d", i + 1);
+//        System.out.println(format);
 
 //        // 获取操作系统的核数
 //        System.out.println(Runtime.getRuntime().availableProcessors());
