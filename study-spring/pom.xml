@@ -24,12 +24,26 @@
             <artifactId>aspectjweaver</artifactId>
             <version>1.7.2</version>
         </dependency>
+        <!-- jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>5.2.0.RELEASE</version>
+        </dependency>
+        <!-- MySQL 连接驱动依赖 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.39</version>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+
+
 
     </dependencies>
 

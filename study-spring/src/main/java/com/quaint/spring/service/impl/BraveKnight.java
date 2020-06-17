@@ -2,6 +2,8 @@ package com.quaint.spring.service.impl;
 
 import com.quaint.spring.service.Knight;
 import com.quaint.spring.service.Quest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -11,12 +13,17 @@ import com.quaint.spring.service.Quest;
  * @author quaint
  * @since 16 June 2020
  */
+@Component
 public class BraveKnight implements Knight {
 
+    @Autowired
     private Quest quest;
 
     public BraveKnight(Quest quest){
         this.quest = quest;
+    }
+
+    public BraveKnight() {
     }
 
     @Override

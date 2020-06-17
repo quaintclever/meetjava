@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
+    <!-- bean -->
     <bean id="knight" class="com.quaint.spring.service.impl.BraveKnight">
         <constructor-arg ref="quest"/>
     </bean>
@@ -13,6 +14,7 @@
         <constructor-arg value="#{T(System).out}"/>
     </bean>
 
+    <!-- aop -->
     <aop:config>
         <aop:aspect ref="minstrel">
             <aop:pointcut id="embark" expression="execution(* *.embarkOnQuest(..))"/>
@@ -20,5 +22,35 @@
             <aop:after pointcut-ref="embark" method="singAfterQuest"/>
         </aop:aspect>
     </aop:config>
+
+    <!-- xml 动态配置数据源-->
+    <!--创建数据源1，连接数据库db1 -->
+    <bean id="mysql1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/study_spring" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
+    </bean>
+    <!--创建数据源2，连接数据库db2 -->
+    <bean id="mysql2" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost:3306/study_spring2" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
+    </bean>
+    <bean id="dynamicDataSource" class="com.quaint.spring.config.DynamicDataSource">
+        <property name="targetDataSources">
+            <map key-type="java.lang.String">
+                <!-- 指定lookupKey和与之对应的数据源 -->
+                <entry key="mysql1" value-ref="mysql1"></entry>
+                <entry key="mysql2" value-ref="mysql2"></entry>
+            </map>
+        </property>
+        <!-- 这里可以指定默认的数据源 -->
+        <property name="defaultTargetDataSource" ref="mysql1" />
+    </bean>
+    <bean id="dataBaseConnection" class="com.quaint.spring.mapper.DataBaseConnection">
+        <property name="dataSource" ref="dynamicDataSource"/>
+    </bean>
 
 </beans>
