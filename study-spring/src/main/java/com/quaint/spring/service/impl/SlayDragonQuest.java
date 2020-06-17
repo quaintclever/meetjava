@@ -22,6 +22,6 @@ public class SlayDragonQuest implements Quest {
 
     @Override
     public void embark() {
-        stream.println("屠龙任务执行成功!");
+        stream.println("屠龙任务进行中!");
     }
 }

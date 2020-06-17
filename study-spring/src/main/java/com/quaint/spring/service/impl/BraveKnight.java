@@ -19,8 +19,9 @@ public class BraveKnight implements Knight {
         this.quest = quest;
     }
 
-    public void embrakOnQuest(){
-        System.out.println("骑士开始执行任务!");
+    @Override
+    public void embarkOnQuest(){
+        System.out.println("骑士接收到任务!");
         quest.embark();
     }
 

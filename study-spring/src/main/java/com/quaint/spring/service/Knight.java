@@ -2,7 +2,7 @@ package com.quaint.spring.service;
 
 /**
  * <p>
- * desc:
+ * desc: 骑士
  * </p>
  *
  * @author quaint
@@ -10,6 +10,6 @@ package com.quaint.spring.service;
  */
 public interface Knight {
 
-    void embrakOnQuest();
+    void embarkOnQuest();
 
 }
