@@ -3,10 +3,8 @@ package com.quaint.spring.mapper;
 import com.quaint.spring.config.DynamicDataSource;
 import com.quaint.spring.po.SpringUserPo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

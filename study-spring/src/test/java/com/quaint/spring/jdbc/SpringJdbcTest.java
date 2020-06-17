@@ -31,7 +31,7 @@ public class SpringJdbcTest {
     }
 
     /**
-     * 注解配置多数据源  未实现
+     * 注解配置多数据源 success
      */
     @Test
     public void dataBaseConnectionAnnotationTest(){

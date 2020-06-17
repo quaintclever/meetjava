@@ -27,14 +27,14 @@
     <!--创建数据源1，连接数据库db1 -->
     <bean id="mysql1" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/study_spring" />
+        <property name="url" value="jdbc:mysql://localhost:3306/study_spring?useSSL=false" />
         <property name="username" value="root" />
         <property name="password" value="root" />
     </bean>
     <!--创建数据源2，连接数据库db2 -->
     <bean id="mysql2" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/study_spring2" />
+        <property name="url" value="jdbc:mysql://localhost:3306/study_spring2?useSSL=false" />
         <property name="username" value="root" />
         <property name="password" value="root" />
     </bean>

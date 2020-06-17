@@ -43,7 +43,7 @@ public class KnightConfig {
     public DataSource createDataSource(){
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/study_spring");
+        ds.setUrl("jdbc:mysql://localhost:3306/study_spring?useSSL=false");
         ds.setUsername("root");
         ds.setPassword("root");
         return ds;
@@ -57,7 +57,7 @@ public class KnightConfig {
     public DataSource createDataSource2(){
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
-        ds.setUrl("jdbc:mysql://localhost:3306/study_spring2");
+        ds.setUrl("jdbc:mysql://localhost:3306/study_spring2?useSSL=false");
         ds.setUsername("root");
         ds.setPassword("root");
         return ds;
