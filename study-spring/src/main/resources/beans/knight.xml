@@ -9,7 +9,7 @@
     <bean id="quest" class="com.quaint.spring.service.impl.SlayDragonQuest">
         <constructor-arg value="#{T(System).out}"/>
     </bean>
-    <bean id="minstrel" class="com.quaint.spring.aop.Minstrel">
+    <bean id="minstrel" class="com.quaint.spring.aop.XmlMinstrel">
         <constructor-arg value="#{T(System).out}"/>
     </bean>
 

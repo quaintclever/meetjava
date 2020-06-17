@@ -1,5 +1,6 @@
 package com.quaint.spring.beans;
 
+import com.quaint.spring.aop.AnnotationMinstrel;
 import com.quaint.spring.service.Knight;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -30,7 +31,7 @@ public class SpringBeanTest {
     @Test
     public void annotationBeanTest(){
         // 通过 annotation 获取 上下文中的 bean
-        ApplicationContext context = new AnnotationConfigApplicationContext("com.quaint.spring.config");
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.quaint.spring");
         // 通过 xml 获取 上下文中的 bean
         Knight knight = context.getBean(Knight.class);
         // 使用 bean

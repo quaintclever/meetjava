@@ -6,6 +6,7 @@ import com.quaint.spring.service.impl.BraveKnight;
 import com.quaint.spring.service.impl.SlayDragonQuest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 /**
  * <p>
@@ -16,6 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * @since 16 June 2020
  */
 @Configuration
+@EnableAspectJAutoProxy
 public class KnightConfig {
 
     @Bean
@@ -23,9 +25,14 @@ public class KnightConfig {
         return new BraveKnight(getQuest());
     }
 
-
     @Bean
     Quest getQuest(){
         return new SlayDragonQuest(System.out);
     }
+
+//    @Bean
+//    AnnotationMinstrel getMinstrel(){
+//        return new AnnotationMinstrel();
+//    }
+
 }
