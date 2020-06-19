@@ -1,5 +1,6 @@
 package com.quaint.spring.jdbc;
 
+import com.quaint.spring.config.DynamicDataSource;
 import com.quaint.spring.helper.jdbc.DynamicDataSourceHolder;
 import com.quaint.spring.mapper.DataBaseConnection;
 import com.quaint.spring.po.SpringUserPo;
@@ -7,6 +8,11 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * <p>
@@ -42,5 +48,21 @@ public class SpringJdbcTest {
         System.out.println(springUserPo);
     }
 
+    /**
+     * 注解使用 jdbc template
+     */
+    @Test
+    public void jdbcTemplateAnnotationTest(){
+        ApplicationContext context = new AnnotationConfigApplicationContext("com.quaint.spring");
+        JdbcTemplate jdbcTemplate = context.getBean(JdbcTemplate.class);
+        DynamicDataSourceHolder.setDataSource("mysql2");
+        SpringUserPo springUserPo = jdbcTemplate.queryForObject("select * from spring_user where id = ?", (rs, rowNum) -> {
+            SpringUserPo user = new SpringUserPo();
+            user.setId(rs.getInt("id"));
+            user.setName(rs.getString("name"));
+            return user;
+            },1);
+        System.out.println(springUserPo);
+    }
 
 }

@@ -3,6 +3,7 @@ package com.quaint.spring.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import javax.sql.DataSource;
@@ -21,6 +22,10 @@ import java.util.Map;
 @EnableAspectJAutoProxy
 public class KnightConfig {
 
+    @Bean
+    public JdbcTemplate createJdbcTemplate(){
+        return new JdbcTemplate(createDynamicDataSource());
+    }
 
     @Bean
     public DynamicDataSource createDynamicDataSource(){
