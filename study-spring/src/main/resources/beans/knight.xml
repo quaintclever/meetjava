@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- bean -->
-    <bean id="knight" class="com.quaint.spring.beans.impl.BraveKnight">
-        <constructor-arg ref="quest"/>
-    </bean>
+    <bean id="knight" class="com.quaint.spring.beans.impl.BraveKnight" c:_0-ref="quest"/>
+
     <bean id="quest" class="com.quaint.spring.beans.impl.SlayDragonQuest">
         <constructor-arg value="#{T(System).out}"/>
     </bean>
-    <bean id="minstrel" class="com.quaint.spring.aop.XmlMinstrel">
-        <constructor-arg value="#{T(System).out}"/>
-    </bean>
+
+    <bean id="minstrel" class="com.quaint.spring.aop.XmlMinstrel" c:_0="#{T(System).out}"/>
 
     <!-- aop -->
     <aop:config>
@@ -55,6 +55,6 @@
     </bean>
 
     <!-- 配置bean 扫描路径 -->
-    <context:component-scan base-package="com.quaint.spring.beans"/>
+    <!--<context:component-scan base-package="com.quaint.spring.beans"/>-->
 
 </beans>
