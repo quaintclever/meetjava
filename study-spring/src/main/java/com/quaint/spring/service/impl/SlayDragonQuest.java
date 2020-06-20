@@ -17,7 +17,7 @@ import java.io.PrintStream;
 @Component
 public class SlayDragonQuest implements Quest {
 
-    @Value("#{T(System).out}")
+    @Value("#{T(System).err}")
     private PrintStream stream;
 
     public SlayDragonQuest(PrintStream stream) {

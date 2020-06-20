@@ -1,6 +1,5 @@
 package com.quaint.spring.jdbc;
 
-import com.quaint.spring.config.DynamicDataSource;
 import com.quaint.spring.helper.jdbc.DynamicDataSourceHolder;
 import com.quaint.spring.mapper.DataBaseConnection;
 import com.quaint.spring.po.SpringUserPo;
@@ -9,10 +8,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 /**
  * <p>
