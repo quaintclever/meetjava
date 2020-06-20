@@ -1,6 +1,6 @@
-package com.quaint.spring.service.impl;
+package com.quaint.spring.beans.impl;
 
-import com.quaint.spring.service.Quest;
+import com.quaint.spring.beans.Quest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

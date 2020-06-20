@@ -1,7 +1,7 @@
-package com.quaint.spring.service.impl;
+package com.quaint.spring.beans.impl;
 
-import com.quaint.spring.service.Knight;
-import com.quaint.spring.service.Quest;
+import com.quaint.spring.beans.Knight;
+import com.quaint.spring.beans.Quest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

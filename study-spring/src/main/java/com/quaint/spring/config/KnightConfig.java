@@ -23,18 +23,18 @@ import java.util.Map;
 public class KnightConfig {
 
     @Bean
-    public JdbcTemplate createJdbcTemplate(){
-        return new JdbcTemplate(createDynamicDataSource());
+    public JdbcTemplate createJdbcTemplate(DynamicDataSource dynamicDataSource){
+        return new JdbcTemplate(dynamicDataSource);
     }
 
     @Bean
-    public DynamicDataSource createDynamicDataSource(){
+    public DynamicDataSource createDynamicDataSource(DataSource mysql1){
         DynamicDataSource dds = new DynamicDataSource();
         Map<Object,Object> dsMap = new HashMap<>(16);
         // 设置默认数据源
-        dds.setDefaultTargetDataSource(createDataSource());
+        dds.setDefaultTargetDataSource(mysql1);
         // 添加多数据源
-        dsMap.put("mysql1",createDataSource());
+        dsMap.put("mysql1",mysql1);
         dsMap.put("mysql2",createDataSource2());
         dds.setTargetDataSources(dsMap);
         return dds;
