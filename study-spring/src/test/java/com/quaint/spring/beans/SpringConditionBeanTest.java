@@ -1,10 +1,10 @@
 package com.quaint.spring.beans;
 
 import com.quaint.spring.config.BaseConfig;
-import com.quaint.spring.service.CompactDisc;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -14,18 +14,19 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * </p>
  *
  * @author quaint
- * @since 20 June 2020
+ * @since 22 June 2020
  */
-@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = BaseConfig.class)
-public class SpringAutoBeanTest {
+@RunWith(SpringJUnit4ClassRunner.class)
+@ActiveProfiles("quaint")
+public class SpringConditionBeanTest {
 
     @Autowired
-    CompactDisc compactDisc;
+    ActiveQuaintBean activeQuaintBean;
 
     @Test
-    public void annotationAutoBeanDI(){
-        compactDisc.play();
+    public void conditionBeanTest(){
+        activeQuaintBean.activeSayHello();
     }
 
 }

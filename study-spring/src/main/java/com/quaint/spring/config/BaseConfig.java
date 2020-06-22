@@ -12,6 +12,6 @@ import org.springframework.context.annotation.Configuration;
  * @since 20 June 2020
  */
 @Configuration
-@ComponentScan(basePackages = "com.quaint.spring.beans")
-public class CDPlayConfig {
+@ComponentScan(basePackages = "com.quaint.spring")
+public class BaseConfig {
 }

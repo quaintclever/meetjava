@@ -1,5 +1,6 @@
 package com.quaint.spring.beans;
 
+import com.quaint.spring.service.Knight;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

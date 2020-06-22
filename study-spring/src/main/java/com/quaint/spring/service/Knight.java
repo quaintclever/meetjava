@@ -1,4 +1,4 @@
-package com.quaint.spring.beans;
+package com.quaint.spring.service;
 
 /**
  * <p>

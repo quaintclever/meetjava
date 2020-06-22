@@ -1,6 +1,6 @@
-package com.quaint.spring.beans.impl;
+package com.quaint.spring.service.impl;
 
-import com.quaint.spring.beans.CompactDisc;
+import com.quaint.spring.service.CompactDisc;
 import org.springframework.stereotype.Component;
 
 /**
