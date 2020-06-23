@@ -1,6 +1,6 @@
 package com.quaint.spring.beans;
 
-import com.quaint.spring.config.BaseConfig;
+import com.quaint.spring.config.BaseScanConfig;
 import com.quaint.spring.service.CompactDisc;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @since 20 June 2020
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = BaseConfig.class)
+@ContextConfiguration(classes = BaseScanConfig.class)
 public class SpringAutoBeanTest {
 
     @Autowired

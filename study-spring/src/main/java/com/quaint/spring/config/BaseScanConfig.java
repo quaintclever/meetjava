@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * <p>
- * desc:
+ * desc: 配置bean 扫描包路径
  * </p>
  *
  * @author quaint
@@ -13,5 +13,5 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(basePackages = "com.quaint.spring")
-public class BaseConfig {
+public class BaseScanConfig {
 }
