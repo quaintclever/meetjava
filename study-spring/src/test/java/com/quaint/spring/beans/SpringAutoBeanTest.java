@@ -1,10 +1,12 @@
 package com.quaint.spring.beans;
 
+import com.quaint.spring.beans.primary.PrimaryTest;
 import com.quaint.spring.config.BaseScanConfig;
 import com.quaint.spring.service.CompactDisc;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -26,6 +28,15 @@ public class SpringAutoBeanTest {
     @Test
     public void annotationAutoBeanDI(){
         compactDisc.play();
+    }
+
+    @Autowired
+//    @Qualifier("normalBean")
+    PrimaryTest primaryTest;
+
+    @Test
+    public void primaryBeanTest(){
+        primaryTest.sayHello();
     }
 
 }
