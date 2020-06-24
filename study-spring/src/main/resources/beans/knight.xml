@@ -39,7 +39,7 @@
         <property name="username" value="root" />
         <property name="password" value="root" />
     </bean>
-    <bean id="dynamicDataSource" class="com.quaint.spring.config.DynamicDataSource">
+    <bean id="dynamicDataSource" class="com.quaint.spring.config.jdbc.DynamicDataSource">
         <property name="targetDataSources">
             <map key-type="java.lang.String">
                 <!-- 指定lookupKey和与之对应的数据源 -->

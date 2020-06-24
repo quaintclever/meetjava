@@ -1,4 +1,4 @@
-package com.quaint.spring.config;
+package com.quaint.spring.helper.active;
 
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;

@@ -1,6 +1,6 @@
 package com.quaint.spring.mapper;
 
-import com.quaint.spring.config.DynamicDataSource;
+import com.quaint.spring.config.jdbc.DynamicDataSource;
 import com.quaint.spring.po.SpringUserPo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

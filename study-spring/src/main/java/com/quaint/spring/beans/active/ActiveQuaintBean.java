@@ -1,6 +1,6 @@
-package com.quaint.spring.beans;
+package com.quaint.spring.beans.active;
 
-import com.quaint.spring.config.ActiveQuaintBeanCondition;
+import com.quaint.spring.helper.active.ActiveQuaintBeanCondition;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.stereotype.Component;
 

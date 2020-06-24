@@ -1,4 +1,4 @@
-package com.quaint.spring.config;
+package com.quaint.spring.config.jdbc;
 
 import com.quaint.spring.helper.jdbc.DynamicDataSourceHolder;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;

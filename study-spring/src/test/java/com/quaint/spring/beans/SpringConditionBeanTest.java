@@ -1,5 +1,6 @@
 package com.quaint.spring.beans;
 
+import com.quaint.spring.beans.active.ActiveQuaintBean;
 import com.quaint.spring.config.BaseScanConfig;
 import org.junit.Test;
 import org.junit.runner.RunWith;
