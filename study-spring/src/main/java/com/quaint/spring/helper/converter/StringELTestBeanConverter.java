@@ -2,7 +2,6 @@ package com.quaint.spring.helper.converter;
 
 import com.alibaba.fastjson.JSONObject;
 import com.quaint.spring.beans.el.ELTestBean;
-import org.springframework.core.convert.ConversionService;
 import org.springframework.core.convert.converter.Converter;
 
 /**
@@ -15,11 +14,6 @@ import org.springframework.core.convert.converter.Converter;
  */
 public class StringELTestBeanConverter implements Converter<String, ELTestBean> {
 
-//    private final ConversionService conversionService;
-//
-//    public StringELTestBeanConverter(ConversionService conversionService) {
-//        this.conversionService = conversionService;
-//    }
 
     @Override
     public ELTestBean convert(String source) {

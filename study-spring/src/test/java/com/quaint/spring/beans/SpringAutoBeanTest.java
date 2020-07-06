@@ -2,6 +2,7 @@ package com.quaint.spring.beans;
 
 import com.quaint.spring.beans.el.ELTestBean;
 import com.quaint.spring.beans.el.ELTestBean2;
+import com.quaint.spring.beans.el.ELTestBean3;
 import com.quaint.spring.beans.primary.PrimaryTest;
 import com.quaint.spring.config.BaseScanConfig;
 import com.quaint.spring.service.CompactDisc;
@@ -24,6 +25,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = BaseScanConfig.class)
 public class SpringAutoBeanTest {
 
+    /**
+     * ======= auto di test =======
+     */
     @Autowired
     CompactDisc compactDisc;
 
@@ -42,8 +46,10 @@ public class SpringAutoBeanTest {
     }
 
 
+    /**
+     * ======= el test =======
+     */
     @Autowired
-    @Qualifier("elTest")
     ELTestBean elTestBean;
 
     @Test
@@ -58,5 +64,14 @@ public class SpringAutoBeanTest {
     public void elTestBean2(){
         elTestBean2.sayHello();
     }
+
+    @Autowired
+    ELTestBean3 elTestBean3;
+
+    @Test
+    public void setElTestBean3(){
+        elTestBean3.sayHello();
+    }
+
 
 }
