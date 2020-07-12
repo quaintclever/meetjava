@@ -35,6 +35,4 @@ public class AnnotationMinstrel {
         stream.println("吟唱诗人: 我歌唱你, 赞美你~~");
     }
 
-
-
 }

@@ -1,6 +1,5 @@
 package com.quaint.spring.config.jdbc;
 
-import com.quaint.spring.config.jdbc.DynamicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
