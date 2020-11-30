@@ -32,7 +32,7 @@ public class RingQueue<T>{
     }
 
     public RingQueue(int initialCapacity) {
-        if (initialCapacity > 1) {
+        if (initialCapacity > 0) {
             this.elementData = new Object[initialCapacity + 1];
             capacity = initialCapacity + 1;
         } else {
@@ -47,6 +47,13 @@ public class RingQueue<T>{
         return true;
     }
 
+    public boolean addAndShow(T t) {
+        System.out.println("add => "+t);
+        boolean status = add(t);
+        showNumHeadTail();
+        return status;
+    }
+
     @SuppressWarnings("unchecked")
     public T poll() {
         if (isEmpty()) {
@@ -59,6 +66,13 @@ public class RingQueue<T>{
         }
     }
 
+    public T pollAndShow() {
+        T t = poll();
+        System.out.println("poll => "+t);
+        showNumHeadTail();
+        return t;
+    }
+
     @SuppressWarnings("unchecked")
     public T peek() {
         if (isEmpty()) {
@@ -66,6 +80,13 @@ public class RingQueue<T>{
         } else {
             return (T) elementData[head];
         }
+    }
+
+    public T peekAndShow() {
+        T t = peek();
+        System.out.println("peek => "+t);
+        showNumHeadTail();
+        return t;
     }
 
     /**
@@ -88,15 +109,18 @@ public class RingQueue<T>{
         }
     }
 
-    public void showHeadTail() {
+    /**
+     * ====== 以下 仅做 展示 使用 =======
+     */
+    public void showNumHeadTail() {
         System.out.println("=================");
-        System.out.println("|\t" +numIdx(head) + "h");
-        System.out.println("|\t" +toString(elementData));
-        System.out.println("|\t" +numIdx(tail) + "t");
+        System.out.println("|\t" + strSpace(head) + "h");
+        System.out.println("|\t" + arrToString(elementData));
+        System.out.println("|\t" + strSpace(tail) + "t");
         System.out.println("=================");
     }
 
-    private static String numIdx(int num) {
+    private static String strSpace(int num) {
         StringBuilder sb = new StringBuilder(" ");
         for (int i = 0; i < num; i++) {
             sb.append("   ");
@@ -104,7 +128,7 @@ public class RingQueue<T>{
         return sb.toString();
     }
 
-    private static String toString(Object[] a) {
+    private static String arrToString(Object[] a) {
         if (a == null) {
             return "-";
         }

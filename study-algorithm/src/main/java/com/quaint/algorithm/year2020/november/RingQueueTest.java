@@ -13,35 +13,16 @@ import com.quaint.algorithm.year2020.november.ring.RingQueue;
 public class RingQueueTest {
 
     public static void main(String[] args) {
-        RingQueue<Integer> ringQueue = new RingQueue<>(2);
+        test2();
+    }
 
-        System.out.println("add => 1");
-        ringQueue.add(1);
-        ringQueue.showHeadTail();
-
-        System.out.println("add => 2");
-        ringQueue.add(2);
-        ringQueue.showHeadTail();
-
-        System.out.println("poll => " + ringQueue.poll());
-        ringQueue.showHeadTail();
-
-        System.out.println("add => 3");
-        ringQueue.add(3);
-        ringQueue.showHeadTail();
-
-        System.out.println("peek => " + ringQueue.peek());
-        ringQueue.showHeadTail();
-
-        System.out.println("poll => " + ringQueue.poll());
-        ringQueue.showHeadTail();
-
-        System.out.println("peek => " + ringQueue.peek());
-        ringQueue.showHeadTail();
-
-        System.out.println("poll => " + ringQueue.poll());
-        ringQueue.showHeadTail();
-
+    private static void test2() {
+        RingQueue<Integer> ringQueue = new RingQueue<>(1);
+        ringQueue.addAndShow(1);
+        ringQueue.pollAndShow();
+        ringQueue.addAndShow(2);
+        ringQueue.pollAndShow();
+        ringQueue.addAndShow(3);
     }
 
 }
