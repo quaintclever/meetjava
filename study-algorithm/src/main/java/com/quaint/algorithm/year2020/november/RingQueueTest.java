@@ -17,12 +17,22 @@ public class RingQueueTest {
     }
 
     private static void test2() {
-        RingQueue<Integer> ringQueue = new RingQueue<>(1);
+        RingQueue<Integer> ringQueue = new RingQueue<>();
         ringQueue.addAndShow(1);
-        ringQueue.pollAndShow();
+        ringQueue.addAndShow(1);
         ringQueue.addAndShow(2);
-        ringQueue.pollAndShow();
+        ringQueue.addAndShow(2);
         ringQueue.addAndShow(3);
+        ringQueue.addAndShow(4);
+        ringQueue.addAndShow(5);
+        ringQueue.addAndShow(6);
+        ringQueue.pollAndShow();
+        ringQueue.pollAndShow();
+        ringQueue.pollAndShow();
+        ringQueue.addAndShow(7);
+        ringQueue.addAndShow(8);
+        ringQueue.addAndShow(9);
+        ringQueue.addAndShow(9);
     }
 
 }
