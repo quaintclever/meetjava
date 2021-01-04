@@ -8,14 +8,21 @@ package com.quaint.other.code.quaint;
 public class TempTest {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
 
-        int m = 0;
-        m = ++m;
-        System.out.println(m);
-        m = m++;
-        System.out.println(m);
+        String test = "abc";
+        String test1 = reverseString(test);
+        System.out.println(test1);
 
+    }
+
+
+    public static String reverseString(String str) {
+        char[] chars = str.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for (int i = chars.length - 1; i >= 0; i--) {
+            sb.append(chars[i]);
+        }
+        return sb.toString();
     }
 
 }
