@@ -14,7 +14,7 @@ package com.quaint.algorithm.year2020.may;
  *
  * 输入: [2,2,1]
  * 输出: 1
- * 示例 2:
+ * 示例 2:
  *
  * 输入: [4,1,2,1,2]
  * 输出: 4
