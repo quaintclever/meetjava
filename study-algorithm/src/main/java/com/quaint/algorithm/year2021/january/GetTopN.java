@@ -1,4 +1,4 @@
-package com.quaint.other.code.interview;
+package com.quaint.algorithm.year2021.january;
 
 import java.util.*;
 
@@ -10,7 +10,8 @@ import java.util.*;
  * @author quaint
  * @since 2021-01-06
  */
-public class QuaintTest {
+public class GetTopN
+{
 
     public static class Node<T> {
         public T val;
