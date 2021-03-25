@@ -6,6 +6,8 @@ package com.quaint.algorithm.year2021.march;
  */
 public class DailyRd {
 
+    public static void main(String[] args) {
 
+    }
 
 }
