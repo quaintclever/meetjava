@@ -43,7 +43,7 @@ public class DailyRd {
 
     public String evaluate(String s, List<List<String>> knowledge) {
         Map<String, String> map = new HashMap<>();
-        knowledge.stream().forEach(l -> map.put(l.get(0),l.get(1)));
+        knowledge.forEach(l -> map.put(l.get(0),l.get(1)));
 
         StringBuilder sb = new StringBuilder();
         boolean flag = false;
