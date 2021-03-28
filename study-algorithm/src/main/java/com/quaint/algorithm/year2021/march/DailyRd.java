@@ -1,7 +1,6 @@
 package com.quaint.algorithm.year2021.march;
 
-import java.util.Deque;
-import java.util.LinkedList;
+import java.util.*;
 
 /**
  * @author quaint
@@ -11,7 +10,89 @@ public class DailyRd {
 
     public static void main(String[] args) {
         DailyRd dailyRd = new DailyRd();
+        System.out.println(dailyRd.reinitializePermutation(4));
+    }
 
+    public int reinitializePermutation(int n) {
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = i;
+        }
+        int[] perm = arr.clone();
+        int count = 0;
+        boolean flag = true;
+        while (flag) {
+            count++;
+            int change = 0;
+            for (int i = 1; i < n; i++) {
+                if (i % 2 == 0) {
+                    arr[i] = perm[i / 2];
+                } else {
+                    arr[i] = perm[n / 2 + (i - 1) / 2];
+                }
+                if (arr[i] != i) {
+                    change++;
+                }
+            }
+            perm = arr.clone();
+            flag = change != 0;
+        }
+        return count;
+    }
+
+
+    public String evaluate(String s, List<List<String>> knowledge) {
+        Map<String, String> map = new HashMap<>();
+        knowledge.stream().forEach(l -> map.put(l.get(0),l.get(1)));
+
+        StringBuilder sb = new StringBuilder();
+        boolean flag = false;
+        StringBuilder key = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            if (flag && s.charAt(i) != ')'){
+                key.append(s.charAt(i));
+            }
+            if (flag && s.charAt(i) == ')') {
+                flag = false;
+                String s1 = map.get(key.toString());
+                key = new StringBuilder();
+                sb.append(s1 == null ? "?" : s1);
+                continue;
+            }
+            if (s.charAt(i) != '(') {
+                if (!flag) {
+                    sb.append(s.charAt(i));
+                }
+            } else {
+                flag = true;
+            }
+        }
+        return sb.toString();
+    }
+
+
+    public int numDifferentIntegers(String word) {
+        String[] split = word.split("[a-z]+");
+        Set<String> set = new HashSet<>();
+        for (int i = 0; i < split.length; i++) {
+            if ("".equals(split[i])) {
+                continue;
+            } else {
+                set.add(delPreZero(split[i]));
+            }
+        }
+        System.out.println(Arrays.toString(split));
+        System.out.println(set.size());
+        return set.size();
+    }
+
+    private String delPreZero(String s){
+        for(int i = 0; i < s.length(); i++) {
+            if ('0' != s.charAt(i)) {
+                return s.substring(i);
+            }
+        }
+        return "0";
     }
 
 
