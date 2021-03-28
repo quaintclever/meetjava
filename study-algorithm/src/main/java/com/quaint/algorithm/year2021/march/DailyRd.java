@@ -98,6 +98,37 @@ public class DailyRd {
 
     /**
      * ✔[42]接雨水
+     * 1. 使用双指针
+     *
+     * @param height
+     * @return
+     */
+    public int trap4(int[] height) {
+        int left = 0, right = height.length - 1;
+        int ans = 0;
+        int lm = 0, rm = 0;
+        while(left < right) {
+            if(height[left] < height[right]) {
+                if(height[left] < lm) {
+                    ans += (lm - height[left]);
+                } else {
+                    lm = height[left];
+                }
+                left++;
+            } else {
+                if(height[right] < rm) {
+                    ans += (rm - height[right]);
+                } else {
+                    rm = height[right];
+                }
+                right--;
+            }
+        }
+        return ans;
+    }
+
+    /**
+     * ✔[42]接雨水
      * 1. 使用stack
      *
      * @param height
