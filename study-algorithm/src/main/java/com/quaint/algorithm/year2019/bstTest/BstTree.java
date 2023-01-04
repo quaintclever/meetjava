@@ -1,7 +1,5 @@
 package com.quaint.algorithm.year2019.bstTest;
 
-import lombok.Data;
-
 import java.util.Objects;
 
 /**
@@ -9,12 +7,27 @@ import java.util.Objects;
  * @author: qi cong
  * @Date: Created in 2019-11-14 16:32
  */
-@Data
 public class BstTree {
 
     // 树的结点个数
     private int size;
     private TreeNote root;
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public TreeNote getRoot() {
+        return root;
+    }
+
+    public void setRoot(TreeNote root) {
+        this.root = root;
+    }
 
     public BstTree(TreeNote root) {
         this.size = 1;

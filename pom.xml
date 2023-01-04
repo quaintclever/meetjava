@@ -19,9 +19,9 @@
 		<relativePath/><!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.quaint</groupId>
-	<artifactId>Java-BaseStudy</artifactId>
+	<artifactId>meetjava</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Java-BaseStudy</name>
+	<name>meetjava</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
