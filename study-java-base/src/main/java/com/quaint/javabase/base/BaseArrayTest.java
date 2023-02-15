@@ -6,7 +6,7 @@ import java.util.Arrays;
  * @author quaint
  * @date 2021/3/30
  */
-public class BaseArray {
+public class BaseArrayTest {
 
     public static void main(String[] args) {
         // 定义一个长度为3元素类型为int的数组a
@@ -21,14 +21,14 @@ public class BaseArray {
             System.out.println(city[i]);
         }
         // 方法2：for range遍历
-        for (String c: city) {
+        for (String c : city) {
             System.out.println(c);
         }
 
-        String [][] cityCom = {
-            {"北京", "上海"},
-            {"广州", "深圳"},
-            {"成都", "重庆"},
+        String[][] cityCom = {
+                {"北京", "上海"},
+                {"广州", "深圳"},
+                {"成都", "重庆"},
         };
         for (int i = 0; i < cityCom.length; i++) {
             System.out.println(Arrays.toString(cityCom[i]));
@@ -43,8 +43,8 @@ public class BaseArray {
             }
         }
         System.out.println("==============================");
-        for (String[] cc: cityCom) {
-            for (String c: cc) {
+        for (String[] cc : cityCom) {
+            for (String c : cc) {
                 System.out.println(c);
             }
         }
