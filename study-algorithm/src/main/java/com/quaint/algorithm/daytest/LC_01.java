@@ -1,9 +1,6 @@
 package com.quaint.algorithm.daytest;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class LC_01 {
 
@@ -13,7 +10,46 @@ public class LC_01 {
                 766527,
                 167767740);
         System.out.println(ans);
+
+        System.out.println(lc01.lineRepeat(new int[][]{{1, 2}, {2, 5}, {3, 7}, {7, 10}}));
     }
+
+    // 线段重复问题
+    public int lineRepeat(int[][] arrs) {
+        // 排序
+        Arrays.sort(arrs, Comparator.comparingInt(a -> a[0]));
+        int ans = 0;
+        PriorityQueue<int[]> heap = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+        PriorityQueue<int[]> hc = null;
+        for (int[] arr : arrs) {
+            if (heap.isEmpty()) {
+                heap.offer(arr);
+            } else {
+                while (!heap.isEmpty()) {
+                    if (arr[0] < heap.peek()[1]) {
+                        heap.offer(arr);
+                        break;
+                    } else {
+                        heap.poll();
+                    }
+                }
+                if (heap.isEmpty()) {
+                    heap.offer(arr);
+                }
+            }
+            if (heap.size() > ans) {
+                hc = new PriorityQueue<>(heap);
+            }
+            ans = Math.max(ans, heap.size());
+        }
+
+        // 输出相交最多的线段
+        while (hc != null && !hc.isEmpty()) {
+            System.out.println(Arrays.toString(hc.poll()));
+        }
+        return ans;
+    }
+
 
     public class TreeNode {
         int val;
@@ -33,7 +69,7 @@ public class LC_01 {
             this.right = right;
         }
     }
-    
+
     public List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null) {
             return new ArrayList<>();

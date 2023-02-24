@@ -1,8 +1,7 @@
 package com.quaint.javabase.juc.base;
 
+import com.quaint.javabase.jdkutil.JdkClassUtil;
 import sun.misc.Unsafe;
-
-import java.lang.reflect.Field;
 
 /**
  * 练习 cas 锁的使用
@@ -36,7 +35,7 @@ public class CasTest {
     public static class MyThread implements Runnable {
         @Override
         public void run() {
-            Unsafe unsafe = getUnsafe();
+            Unsafe unsafe = JdkClassUtil.getUnsafe();
             long off;
             try {
                 off = unsafe.objectFieldOffset(Integer.class.getDeclaredField("value"));
@@ -51,16 +50,6 @@ public class CasTest {
         }
     }
 
-    public static Unsafe getUnsafe() {
-        Class<Unsafe> unsafeClass = Unsafe.class;
-        try {
-            Field theUnsafe = unsafeClass.getDeclaredField("theUnsafe");
-            theUnsafe.setAccessible(true);
-            return (Unsafe) theUnsafe.get(null);
-        } catch (NoSuchFieldException | IllegalAccessException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
 }
 

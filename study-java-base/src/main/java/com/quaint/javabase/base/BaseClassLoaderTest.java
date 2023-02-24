@@ -1,7 +1,5 @@
 package com.quaint.javabase.base;
 
-import sun.misc.Unsafe;
-
 /**
  * -Xbootclasspath/a: path
  * 意思是 追加 bootclass 类加载器扫秒的路径
@@ -12,7 +10,6 @@ public class BaseClassLoaderTest {
         Inner in = new Inner();
         in.hello();
         System.out.println(String.class.getClassLoader());
-        System.out.println(Unsafe.class.getClassLoader());
     }
 
     public static class Inner {
