@@ -24,7 +24,7 @@ public class ParamValidTestController {
     // http://localhost:8080/doc.html#/-v3-api-docs/%E5%8F%82%E6%95%B0%E6%A0%A1%E9%AA%8C%E6%B5%8B%E8%AF%95/timeParamTest
     @PostMapping("time")
     @Operation(summary = "时间格式化测试")
-    public ParamValidDto.Time timeParamTest(@Valid @RequestBody ParamValidDto.Time param) {
+    public ParamValidDto.TimeChild timeParamTest(@Valid @RequestBody ParamValidDto.TimeChild param) {
         System.out.println(param);
         return param;
     }
