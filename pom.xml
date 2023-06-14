@@ -10,6 +10,7 @@
         <module>study-java-base</module>
         <module>study-other-code</module>
         <module>study-spring</module>
+        <module>study-springboot</module>
     </modules>
     <!-- 父工程 -->
     <parent>
